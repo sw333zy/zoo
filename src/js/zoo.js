@@ -2,7 +2,7 @@
     'use strict';
 
     window.zoo = window.zoo || {};
-    window.zoo.animal = Animal;
+    window.zoo.Animal = Animal;
     window.zoo.Polarbear = Polarbear;
     window.zoo.Koalabear = Koalabear;
 
