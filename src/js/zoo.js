@@ -8,10 +8,20 @@
         this.dob = dob || 3;
     }
 
+    // var dateString = '2007-11-21';
+
     Animal.prototype.getAge = function getAge() {
-        console.log(this.date);
-        return 5;
+
+    // THIS WILL WORK UNSURE HOW TO CALL
+    //   function getAge(dateString) {
+    //     var birthday = new Date(dateString);
+    //     var ageDifMs = Date.now() - birthday.getTime();
+    //     var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    //     return Math.abs(ageDate.getFullYear() - 1970);
+    //   }
     };
+
+
 
     //Polar Bear
 
@@ -19,13 +29,7 @@
         Animal.apply(this, [name]);
 
         this.species = 'Polarbear';
-        // this.role = role || 'killer bear';
-        // if (typeof(Animal) === 'boolean') {
-        //     this.hat = hat;
-        //  } else {
-        // //     // this is still a DEFAULT value, just a different way to do it
-        //      this.hat = false;
-        //  }
+        this.name = name || 'Guy';
 
         console.log(this, arguments);
     }
@@ -37,15 +41,18 @@
 
     };
 
-    var pb = new Polarbear('Guy', 36585937283836);
+    var pb = new Polarbear('Pete', 36585937283836);
 
     console.log(pb.getAge());
     console.log(pb.kill('dog'));
     console.log(pb);
 
-    // var koalaBear = new Animal('Gal', 36585937285556);
-    //
-    // console.log(koalaBear, koalaBear.getAge());
+    Polarbear.prototype.birth = function birth() {
+      return new Polarbear('Phillip', 56556447646994);
+    };
+
+    console.log(pb.birth());
+
 
     // function getAge(birth) {
     // var ageMS = Date.parse(Date()) - Date.parse(birth);
@@ -62,13 +69,7 @@
         Animal.apply(this, [name]);
 
         this.species = 'Koalabear';
-        // this.role = role || 'killer bear';
-        // if (typeof(Animal) === 'boolean') {
-        //     this.hat = hat;
-        //  } else {
-        // //     // this is still a DEFAULT value, just a different way to do it
-        //      this.hat = false;
-        //  }
+        this.name = name || 'Gal';
 
         console.log(this, arguments);
     }
@@ -80,11 +81,17 @@
 
     };
 
-    var kb = new Koalabear('Gal', 36585937555836);
+    var kb = new Koalabear('Kelly', 36585937555836);
 
     console.log(kb.getAge());
     console.log(kb.climb('a tree'));
     console.log(kb);
+
+    Koalabear.prototype.birth = function birth() {
+      return new Koalabear('Kristina', 56556447646444);
+    };
+
+    console.log(kb.birth());
 
 
 
