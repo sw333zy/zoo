@@ -17,7 +17,7 @@
         this.dob = dob || 3;
     }
 
-    // var dateString = '2007-11-21';
+
 
     Animal.prototype.getAge = function getAge(dob) {
         var birthday = new Date(dob);
@@ -67,16 +67,6 @@
     };
 
     console.log(pb.birth());
-
-
-    // function getAge(birth) {
-    // var ageMS = Date.parse(Date()) - Date.parse(birth);
-    // var age = new Date();
-    // age.setTime(ageMS);
-    // ageYear = age.getFullYear() - 1970;
-    //
-    // console.log(new Date);
-    //
 
     //Koala Bear
 
