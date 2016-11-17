@@ -13,7 +13,15 @@
      * @param {number} dob  an animals age
      */
     function Animal(name, dob) {
+
+        if (typeof(name) !== 'string'){
+          throw new TypeError('This a not a not a string');
+        }
         this.name = name || 'Random';
+
+        if (typeof(dob) !== 'number'){
+          throw new TypeError();
+        }
         this.dob = dob || 3;
     }
 
@@ -52,6 +60,9 @@
     Polarbear.prototype.species = 'Polarbear';
 
     Polarbear.prototype.kill = function kill(animals) {
+      if (typeof(animals) !== 'string'){
+        throw new TypeError('Animals is not a string');
+      }
         return 'picked ' + animals + ' bones';
 
     };
@@ -89,6 +100,9 @@
 
 
     Koalabear.prototype.climb = function climb(structure) {
+      if (typeof(structure) !== 'string'){
+        throw new TypeError('Structure is not a string');
+      }
         return 'climbed up' + ' ' + structure;
 
     };
@@ -104,6 +118,10 @@
     };
 
     console.log(kb.birth());
+
+    // var baby = kb.birth();
+    // baby instanceof Koalabear;
+    // baby.name === 'Kristina';
 
     //var x equals new animal is object
     //instance of animal
